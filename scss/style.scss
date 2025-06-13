@@ -1,0 +1,151 @@
+@import "_nullstyle.scss";
+
+html {
+	@media (max-width: 35rem) {
+		font-size: 0.8rem;
+	}
+	@media (max-width: 25rem) {
+		font-size: 0.6rem;
+	}
+}
+
+body {
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	min-height: 100vh;
+	font-size: 1rem;
+	font-family: "Arial", sans-serif;
+	background-color: #f0f2f5;
+	padding: 1.25em;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 35rem;
+	gap: 1.25em;
+	padding: 1.875em;
+	background-color: #ffffff;
+	border-radius: 0.75em;
+	box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.15);
+	@media (max-width: 35rem) {
+		max-width: 100%;
+	}
+}
+
+h1 {
+	font-size: 2.2rem;
+	text-align: center;
+	color: #2c3e50;
+	font-weight: bold;
+	margin-bottom: 0.284em;
+}
+
+.input-section {
+	display: flex;
+	gap: 0.625em;
+}
+
+.taskInput {
+	font-size: 1.1rem;
+	padding: 0.795em 1.022em;
+	width: 100%;
+	flex-grow: 1;
+	border-radius: 0.45em;
+	border: 1px solid #c8d6e5;
+	outline: none;
+	transition: 0.3s ease;
+
+	&:focus {
+		border-color: #4caf50;
+		box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+	}
+}
+
+.addTaskBtn {
+	font-size: 1.1rem;
+	font-weight: bold;
+	color: white;
+	padding: 0.795em 1.42em;
+	background-color: #4caf50;
+	border: none;
+	border-radius: 0.454em;
+	cursor: pointer;
+	transition: 0.3s ease;
+
+	&:hover {
+		background-color: #45a049;
+		transform: translateY(-2px);
+	}
+
+	&:active {
+		transform: translateY(0);
+	}
+}
+
+.taskList li {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.937em 1.25em;
+	margin-bottom: 0.625em;
+	background-color: #f8f9fa;
+	border-radius: 0.5em;
+	border: 1px solid #e0e6ed;
+	word-break: break-word;
+	transition: 0.3s ease;
+}
+
+.taskList li:last-child {
+	margin-bottom: 0;
+}
+
+.taskList li.completed {
+	background-color: #e6ffee;
+}
+
+.taskList li span {
+	color: #34495e;
+	font-size: 1.05rem;
+	padding-right: 0.892em;
+	flex-grow: 1;
+	cursor: pointer;
+}
+
+.taskList li.completed span {
+	color: #7f8c8dd3;
+	text-decoration: line-through;
+}
+
+.taskList li button {
+	font-size: 0.9rem;
+	font-weight: bold;
+	color: white;
+	padding: 0.694em 1.041em;
+	background-color: #e74c3c;
+	flex-shrink: 0;
+	border: none;
+	border-radius: 0.416em;
+	cursor: pointer;
+	transition: 0.3s ease;
+
+	&:hover {
+		background-color: #c0392b;
+		transform: translateY(-1px);
+	}
+
+	&:active {
+		transform: translateY(0);
+	}
+}
+
+.noTasksMessage {
+	text-align: center;
+	color: #7f8c8d;
+	font-style: italic;
+	background-color: #f0f2f5;
+	cursor: default;
+}
