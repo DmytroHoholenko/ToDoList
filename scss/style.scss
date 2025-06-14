@@ -97,6 +97,7 @@ h1 {
 	border: 1px solid #e0e6ed;
 	word-break: break-word;
 	transition: 0.3s ease;
+	cursor: pointer;
 }
 
 .taskList li:last-child {
@@ -112,7 +113,6 @@ h1 {
 	font-size: 1.05rem;
 	padding-right: 0.892em;
 	flex-grow: 1;
-	cursor: pointer;
 }
 
 .taskList li.completed span {

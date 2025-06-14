@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			taskTextSpan.textContent = task.text;
 
 			// обробник кліку для перемикання статусу "виконано"
-			taskTextSpan.addEventListener('click', () => toggleTaskCompleted(index));
+			li.addEventListener('click', () => toggleTaskCompleted(index));
 			
 			if (task.completed) {
 				li.classList.add('completed');
